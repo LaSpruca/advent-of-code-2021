@@ -6,19 +6,27 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [[bin]]
-name = "day-one"
-path = "src/one.rs"
+name = "1-1"
+path = "src/day-one/part-one.rs"
 
 [[bin]]
-name = "day-one-part-two"
-path = "src/one-pt2.rs"
+name = "1-2"
+path = "src/day-one/part-two.rs"
 
 [[bin]]
-name = "day-two"
-path = "src/two.rs"
+name = "2-1"
+path = "src/day-two/part-one.rs"
 
 [[bin]]
-name = "day-two-part-two"
-path = "src/two-pt2.rs"
+name = "2-2"
+path = "src/day-two/part-two.rs"
+
+[[bin]]
+name = "3-1"
+path = "src/day-three/part-one.rs"
+
+[[bin]]
+name = "3-2"
+path = "src/day-three/part-two.rs"
 
 [dependencies]

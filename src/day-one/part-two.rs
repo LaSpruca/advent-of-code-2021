@@ -1,4 +1,4 @@
-const INPUT: &str = include_str!("one-input.txt");
+const INPUT: &str = include_str!("input.txt");
 
 fn main() {
     let readings = INPUT

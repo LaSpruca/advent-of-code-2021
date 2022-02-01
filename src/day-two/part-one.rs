@@ -1,7 +1,8 @@
-const INPUT: &str = include_str!("two-input.txt");
+const INPUT: &str = include_str!("input.txt");
 
 fn main() {
-    let result = INPUT.split("\n")
+    let result = INPUT
+        .split("\n")
         .map(|instruction| {
             let parts = instruction.trim().split(" ").collect::<Vec<_>>();
             let inst = parts[0];
@@ -15,7 +16,7 @@ fn main() {
             }
         })
         .filter_map(|f| f)
-        .fold((0, 0, 0),
-              |(aim, x, y), (index, units)| if index == 0 { (aim, x + units, y + units * aim) } else { (aim + units, x, y) });
-    println!("{}", result.1 * result.2);
+        .fold((0, 0),
+              |(a, b), (index, units)| if index == 0 { (a + units, b) } else { (a, b + units) });
+    println!("{}", result.0 * result.1);
 }
